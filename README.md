@@ -9,3 +9,5 @@ This project uses the basics of:
 * Colliders and triggers
 * Rigidbody physics
 * Mobile controls
+
+This demo was made with Unity Version 2018.3.3f1
