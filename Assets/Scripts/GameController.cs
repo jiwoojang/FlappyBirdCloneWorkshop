@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     private Text scoreText;
 
     [SerializeField]
-    private GameObject restartButton;
+    private GameObject restartUI;
 
     [SerializeField]
     private Text finalScoreText;
@@ -33,7 +33,9 @@ public class GameController : MonoBehaviour
 
     public void StopPlaying() {
         isPlaying = false;
-        restartButton.SetActive(true);
+
+        // Turn on the restart UI
+        restartUI.SetActive(true);
 
         finalScoreText.text = "Final Score: " + score.ToString();
     }
@@ -50,8 +52,8 @@ public class GameController : MonoBehaviour
             instance = this;
         }
 
-        // Turn off the restart button by default
-        restartButton.SetActive(false);
+        // Turn off the restart UI by default
+        restartUI.SetActive(false);
     }
 
     public void RestartGame() {

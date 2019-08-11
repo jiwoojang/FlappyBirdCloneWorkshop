@@ -10,4 +10,11 @@ This project uses the basics of:
 * Rigidbody physics
 * Mobile controls
 
-This demo was made with Unity Version 2018.3.3f1
+See the results below!
+
+<p align="center">
+  <img src="https://gyazo.com/57a18e469034e8b2fe183651e4c83865" width="400"/>
+</p>
+
+Art was used from a python clone of flappy bird found [here](https://github.com/sourabhv/FlapPyBird)
+This demo was made with Unity Version 2019.2.0f1

@@ -18,6 +18,7 @@ public class InputController : MonoBehaviour
         return GetTouchInput();
 #else
         if (UnityEditor.EditorApplication.isRemoteConnected) {
+            // For remote debugging in mobile
             return GetTouchInput();
         }
         else {
@@ -54,6 +55,7 @@ public class InputController : MonoBehaviour
             }
 
             if (GameController.instance.isPlaying) {
+                // Make the bird flap!
                 Debug.Log("Flap!");
                 birdController.Flap();
             }

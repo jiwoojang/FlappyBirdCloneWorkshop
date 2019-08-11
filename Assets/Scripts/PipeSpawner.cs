@@ -14,6 +14,7 @@ public class PipeSpawner : MonoBehaviour
     private float spawnRangeUnits = 2.0f;
 
     public void StartSpawningPipes() {
+        // External interface to start spawning pipes
         StartCoroutine("SpawnPipes");
     }
 
@@ -26,6 +27,7 @@ public class PipeSpawner : MonoBehaviour
     }
 
     private IEnumerator SpawnPipes() {
+        // Runs as long as the game is running
         while (GameController.instance.isPlaying) {
             SpawnPipe();
 
