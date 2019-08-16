@@ -27,10 +27,11 @@ public class PipeSpawner : MonoBehaviour
     }
 
     private IEnumerator SpawnPipes() {
-        // Runs as long as the game is running
-        while (GameController.instance.isPlaying) {
+        // Runs as long as the time in game is running
+        while(true) {
             SpawnPipe();
 
+            // Note that WaitForSeconds is affected by Time.Timescale
             yield return new WaitForSeconds(timeBetweenPipes);
         }
     }

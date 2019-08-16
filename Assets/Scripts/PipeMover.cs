@@ -12,9 +12,7 @@ public class PipeMover : MonoBehaviour
 
     private void Update() {
         // Move the pipe every frame that it is alive
-        if (GameController.instance.isPlaying) {
-            pipeTransform.position += Vector3.right * -moveSpeed * Time.deltaTime;
-        }
+        pipeTransform.position += Vector3.right * -moveSpeed * Time.deltaTime;
     }
 
     private void OnTriggerExit2D(Collider2D collision) {

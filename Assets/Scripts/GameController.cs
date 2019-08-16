@@ -9,8 +9,6 @@ public class GameController : MonoBehaviour
     // Singleton access
     public static GameController instance;
 
-    public bool isPlaying { get; private set; }
-
     public int score { get; private set; }
 
     [SerializeField]
@@ -28,16 +26,22 @@ public class GameController : MonoBehaviour
     }
 
     public void StartPlaying() {
-        isPlaying = true;
+        // Start the game if it was paused
+        Time.timeScale = 1.0f;
+
+        Debug.Log("Game started");
     }
 
     public void StopPlaying() {
-        isPlaying = false;
+        // Stop the game
+        Time.timeScale = 0.0f;
 
         // Turn on the restart UI
         restartUI.SetActive(true);
 
         finalScoreText.text = "Final Score: " + score.ToString();
+
+        Debug.Log("Game stopped");
     }
 
     private void Awake() {
@@ -54,6 +58,9 @@ public class GameController : MonoBehaviour
 
         // Turn off the restart UI by default
         restartUI.SetActive(false);
+
+        // Start the game
+        StartPlaying();
     }
 
     public void RestartGame() {

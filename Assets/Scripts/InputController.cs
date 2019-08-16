@@ -45,20 +45,12 @@ public class InputController : MonoBehaviour
             if (!hasStartedFlapping) {
                 hasStartedFlapping = true;
 
-                // Start the game if the first flap happened
-                if (!GameController.instance.isPlaying) {
-                    GameController.instance.StartPlaying();
-                }
-
                 // Start the pipes
                 pipeSpawner.StartSpawningPipes();
             }
 
-            if (GameController.instance.isPlaying) {
-                // Make the bird flap!
-                Debug.Log("Flap!");
-                birdController.Flap();
-            }
+            Debug.Log("Flap!");
+            birdController.Flap();
         }
     }
 }
