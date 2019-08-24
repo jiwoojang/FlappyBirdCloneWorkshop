@@ -365,6 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6772566292138767598}
   - component: {fileID: 4891402210365594994}
+  - component: {fileID: 8480830317213068113}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Score
@@ -412,6 +413,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!50 &8480830317213068113
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4120829871108821778}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &6249413281552971653
 GameObject:
   m_ObjectHideFlags: 0
