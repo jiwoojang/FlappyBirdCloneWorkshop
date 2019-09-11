@@ -8,17 +8,11 @@ public class GameController : MonoBehaviour
 {
     // Singleton access
     public static GameController instance;
+    public Text scoreText;
+    public GameObject restartUI;
+    public Text finalScoreText;
 
-    public int score { get; private set; }
-
-    [SerializeField]
-    private Text scoreText;
-
-    [SerializeField]
-    private GameObject restartUI;
-
-    [SerializeField]
-    private Text finalScoreText;
+    private int score;
 
     public void IncreaseScore() {
         score++;
@@ -44,6 +38,15 @@ public class GameController : MonoBehaviour
         Debug.Log("Game stopped");
     }
 
+    public void RestartGame() {
+        // Get this current scene
+        Scene thisScene = SceneManager.GetActiveScene();
+
+        // Restart it
+        // Do this with build index incase scene names are the same
+        SceneManager.LoadScene(thisScene.buildIndex);
+    }
+
     private void Awake() {
         // Singleton enforcement
         if (instance == null) {
@@ -61,14 +64,5 @@ public class GameController : MonoBehaviour
 
         // Start the game
         StartPlaying();
-    }
-
-    public void RestartGame() {
-        // Get this current scene
-        Scene thisScene = SceneManager.GetActiveScene();
-
-        // Restart it
-        // Do this with build index incase scene names are the same
-        SceneManager.LoadScene(thisScene.buildIndex);
     }
 }

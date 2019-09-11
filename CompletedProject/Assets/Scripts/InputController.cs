@@ -12,7 +12,7 @@ public class InputController : MonoBehaviour
 
     private bool hasStartedFlapping = false;
 
-    // This function will change behaviour depepdning on platform
+    // This function will change behaviour depending on platform
     private bool IsFlapKeyPressed() {
 #if UNITY_IOS || UNITY_ANDROID
         return GetTouchInput();

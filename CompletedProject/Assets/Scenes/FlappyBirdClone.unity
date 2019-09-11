@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 1233663178}
   - component: {fileID: 1233663177}
   m_Layer: 5
-  m_Name: UI Canvas
+  m_Name: Background Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 1348888117}
   - component: {fileID: 1348888116}
   m_Layer: 5
-  m_Name: Restart Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1100,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475818445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.4784, y: 4.4784, z: 4.4784}
   m_Children: []
   m_Father: {fileID: 1348888119}

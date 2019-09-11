@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class BirdController : MonoBehaviour
 {
-    [SerializeField]
-    private float flapForce = 5.0f;
-
-    [SerializeField]
-    private float rotationTipScale = 2.0f;
+    public float flapForce = 5.0f;
+    public float rotationTipScale = 2.0f;
 
     private Rigidbody2D birdRigidbody;
     private Vector2 flapDirection;

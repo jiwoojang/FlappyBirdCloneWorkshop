@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class PipeMover : MonoBehaviour
 {
-    [SerializeField]
-    private Transform pipeTransform;
-
-    [SerializeField]
-    private float moveSpeed = 5.0f;
+    public Transform pipeTransform;
+    public float moveSpeed = 5.0f;
 
     private void Update() {
         // Move the pipe every frame that it is alive

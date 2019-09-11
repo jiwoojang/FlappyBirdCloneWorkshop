@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject pipePrefab;
-
-    [SerializeField]
-    private float timeBetweenPipes = 2.0f;
-
-    [SerializeField]
-    private float spawnRangeUnits = 2.0f;
-
-    public void StartSpawningPipes() {
-        // External interface to start spawning pipes
-        StartCoroutine("SpawnPipes");
-    }
+    public GameObject pipePrefab;
+    public float timeBetweenPipes = 2.0f;
+    public float spawnRangeUnits = 2.0f;
 
     private void SpawnPipe() {
         // Pick a random spot
@@ -34,5 +24,10 @@ public class PipeSpawner : MonoBehaviour
             // Note that WaitForSeconds is affected by Time.Timescale
             yield return new WaitForSeconds(timeBetweenPipes);
         }
+    }
+
+    public void StartSpawningPipes() {
+        // External interface to start spawning pipes
+        StartCoroutine("SpawnPipes");
     }
 }
